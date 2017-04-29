@@ -1,0 +1,15 @@
+//
+//  PeriodHelper-PrefixHeader.pch
+//  PeriodHelper
+//
+//  Created by GIGIGUN on 29/04/2017.
+//  Copyright © 2017 GIGIGUN. All rights reserved.
+//
+
+#ifndef PeriodHelper_PrefixHeader_pch
+#define PeriodHelper_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PeriodHelper_PrefixHeader_pch */

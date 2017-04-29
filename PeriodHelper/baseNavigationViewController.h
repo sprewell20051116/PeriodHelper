@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  baseNavigationViewController.h
 //  PeriodHelper
 //
 //  Created by GIGIGUN on 22/04/2017.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface baseNavigationViewController : UINavigationController
 
 @end
-
