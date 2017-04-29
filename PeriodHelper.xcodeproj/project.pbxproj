@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		102B087A1EAB2F320085B0C8 /* baseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 102B08791EAB2F320085B0C8 /* baseNavigationViewController.m */; };
 		104ACD6A1EAAFF0D00B1AF05 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 104ACD691EAAFF0D00B1AF05 /* main.m */; };
 		104ACD6D1EAAFF0D00B1AF05 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 104ACD6C1EAAFF0D00B1AF05 /* AppDelegate.m */; };
-		104ACD701EAAFF0D00B1AF05 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 104ACD6F1EAAFF0D00B1AF05 /* ViewController.m */; };
 		104ACD731EAAFF0D00B1AF05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 104ACD711EAAFF0D00B1AF05 /* Main.storyboard */; };
 		104ACD761EAAFF0D00B1AF05 /* PeriodHelper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 104ACD741EAAFF0D00B1AF05 /* PeriodHelper.xcdatamodeld */; };
 		104ACD781EAAFF0D00B1AF05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 104ACD771EAAFF0D00B1AF05 /* Assets.xcassets */; };
 		104ACD7B1EAAFF0D00B1AF05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 104ACD791EAAFF0D00B1AF05 /* LaunchScreen.storyboard */; };
 		104ACD861EAAFF0D00B1AF05 /* PeriodHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 104ACD851EAAFF0D00B1AF05 /* PeriodHelperTests.m */; };
 		104ACD911EAAFF0D00B1AF05 /* PeriodHelperUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 104ACD901EAAFF0D00B1AF05 /* PeriodHelperUITests.m */; };
+		104ACDA01EAAFF3700B1AF05 /* PHMainPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 104ACD9F1EAAFF3700B1AF05 /* PHMainPage.m */; };
+		1087B83D1EB4381400CBA33F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1087B83C1EB4381400CBA33F /* GoogleService-Info.plist */; };
+		1087B8401EB43B6700CBA33F /* baseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1087B83F1EB43B6700CBA33F /* baseViewController.m */; };
+		1087B8451EB43D0100CBA33F /* PHLoginPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1087B8441EB43D0100CBA33F /* PHLoginPage.m */; };
+		F7E7986D55AE2B3A02B734CD /* libPods-PeriodHelper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 268531C45CF846D064C13280 /* libPods-PeriodHelper.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,12 +41,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0727E834EF719F20388217D0 /* Pods-PeriodHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeriodHelper.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeriodHelper/Pods-PeriodHelper.release.xcconfig"; sourceTree = "<group>"; };
+		102B08781EAB2F320085B0C8 /* baseNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = baseNavigationViewController.h; sourceTree = "<group>"; };
+		102B08791EAB2F320085B0C8 /* baseNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = baseNavigationViewController.m; sourceTree = "<group>"; };
+		102B087B1EAB2F670085B0C8 /* General.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = General.h; sourceTree = "<group>"; };
 		104ACD651EAAFF0D00B1AF05 /* PeriodHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeriodHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		104ACD691EAAFF0D00B1AF05 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		104ACD6B1EAAFF0D00B1AF05 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		104ACD6C1EAAFF0D00B1AF05 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		104ACD6E1EAAFF0D00B1AF05 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		104ACD6F1EAAFF0D00B1AF05 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		104ACD721EAAFF0D00B1AF05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		104ACD751EAAFF0D00B1AF05 /* PeriodHelper.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PeriodHelper.xcdatamodel; sourceTree = "<group>"; };
 		104ACD771EAAFF0D00B1AF05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +60,16 @@
 		104ACD8C1EAAFF0D00B1AF05 /* PeriodHelperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeriodHelperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		104ACD901EAAFF0D00B1AF05 /* PeriodHelperUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeriodHelperUITests.m; sourceTree = "<group>"; };
 		104ACD921EAAFF0D00B1AF05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		104ACD9E1EAAFF3700B1AF05 /* PHMainPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHMainPage.h; sourceTree = "<group>"; };
+		104ACD9F1EAAFF3700B1AF05 /* PHMainPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHMainPage.m; sourceTree = "<group>"; };
+		1087B83C1EB4381400CBA33F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1087B83E1EB43B6700CBA33F /* baseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = baseViewController.h; sourceTree = "<group>"; };
+		1087B83F1EB43B6700CBA33F /* baseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = baseViewController.m; sourceTree = "<group>"; };
+		1087B8421EB43BA300CBA33F /* PeriodHelper-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PeriodHelper-PrefixHeader.pch"; sourceTree = "<group>"; };
+		1087B8431EB43D0100CBA33F /* PHLoginPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHLoginPage.h; sourceTree = "<group>"; };
+		1087B8441EB43D0100CBA33F /* PHLoginPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHLoginPage.m; sourceTree = "<group>"; };
+		268531C45CF846D064C13280 /* libPods-PeriodHelper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PeriodHelper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		60FF1FD7E26E04407EF0AFCA /* Pods-PeriodHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeriodHelper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeriodHelper/Pods-PeriodHelper.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7E7986D55AE2B3A02B734CD /* libPods-PeriodHelper.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +105,8 @@
 				104ACD841EAAFF0D00B1AF05 /* PeriodHelperTests */,
 				104ACD8F1EAAFF0D00B1AF05 /* PeriodHelperUITests */,
 				104ACD661EAAFF0D00B1AF05 /* Products */,
+				E3FEECB44DD6EEC683E5C5AC /* Pods */,
+				54B3116D1E8AA442BB99EE32 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,16 +123,22 @@
 		104ACD671EAAFF0D00B1AF05 /* PeriodHelper */ = {
 			isa = PBXGroup;
 			children = (
+				102B087B1EAB2F670085B0C8 /* General.h */,
+				104ACD9E1EAAFF3700B1AF05 /* PHMainPage.h */,
+				104ACD9F1EAAFF3700B1AF05 /* PHMainPage.m */,
+				1087B8431EB43D0100CBA33F /* PHLoginPage.h */,
+				1087B8441EB43D0100CBA33F /* PHLoginPage.m */,
+				104ACD711EAAFF0D00B1AF05 /* Main.storyboard */,
+				1087B8411EB43B7200CBA33F /* baseViewControllers */,
 				104ACD6B1EAAFF0D00B1AF05 /* AppDelegate.h */,
 				104ACD6C1EAAFF0D00B1AF05 /* AppDelegate.m */,
-				104ACD6E1EAAFF0D00B1AF05 /* ViewController.h */,
-				104ACD6F1EAAFF0D00B1AF05 /* ViewController.m */,
-				104ACD711EAAFF0D00B1AF05 /* Main.storyboard */,
 				104ACD771EAAFF0D00B1AF05 /* Assets.xcassets */,
 				104ACD791EAAFF0D00B1AF05 /* LaunchScreen.storyboard */,
 				104ACD7C1EAAFF0D00B1AF05 /* Info.plist */,
 				104ACD741EAAFF0D00B1AF05 /* PeriodHelper.xcdatamodeld */,
 				104ACD681EAAFF0D00B1AF05 /* Supporting Files */,
+				1087B83C1EB4381400CBA33F /* GoogleService-Info.plist */,
+				1087B8421EB43BA300CBA33F /* PeriodHelper-PrefixHeader.pch */,
 			);
 			path = PeriodHelper;
 			sourceTree = "<group>";
@@ -143,6 +169,34 @@
 			path = PeriodHelperUITests;
 			sourceTree = "<group>";
 		};
+		1087B8411EB43B7200CBA33F /* baseViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				102B08781EAB2F320085B0C8 /* baseNavigationViewController.h */,
+				102B08791EAB2F320085B0C8 /* baseNavigationViewController.m */,
+				1087B83E1EB43B6700CBA33F /* baseViewController.h */,
+				1087B83F1EB43B6700CBA33F /* baseViewController.m */,
+			);
+			name = baseViewControllers;
+			sourceTree = "<group>";
+		};
+		54B3116D1E8AA442BB99EE32 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				268531C45CF846D064C13280 /* libPods-PeriodHelper.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E3FEECB44DD6EEC683E5C5AC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				60FF1FD7E26E04407EF0AFCA /* Pods-PeriodHelper.debug.xcconfig */,
+				0727E834EF719F20388217D0 /* Pods-PeriodHelper.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,9 +204,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 104ACD951EAAFF0D00B1AF05 /* Build configuration list for PBXNativeTarget "PeriodHelper" */;
 			buildPhases = (
+				6ED672A95DE9BBB950853AEE /* [CP] Check Pods Manifest.lock */,
 				104ACD611EAAFF0D00B1AF05 /* Sources */,
 				104ACD621EAAFF0D00B1AF05 /* Frameworks */,
 				104ACD631EAAFF0D00B1AF05 /* Resources */,
+				C6EEF40D0D96A8D6F507A97F /* [CP] Embed Pods Frameworks */,
+				37554FE59B029BAE965DDD8C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				104ACD7B1EAAFF0D00B1AF05 /* LaunchScreen.storyboard in Resources */,
+				1087B83D1EB4381400CBA33F /* GoogleService-Info.plist in Resources */,
 				104ACD781EAAFF0D00B1AF05 /* Assets.xcassets in Resources */,
 				104ACD731EAAFF0D00B1AF05 /* Main.storyboard in Resources */,
 			);
@@ -274,13 +332,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		37554FE59B029BAE965DDD8C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PeriodHelper/Pods-PeriodHelper-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6ED672A95DE9BBB950853AEE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C6EEF40D0D96A8D6F507A97F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PeriodHelper/Pods-PeriodHelper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		104ACD611EAAFF0D00B1AF05 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				104ACD761EAAFF0D00B1AF05 /* PeriodHelper.xcdatamodeld in Sources */,
-				104ACD701EAAFF0D00B1AF05 /* ViewController.m in Sources */,
+				1087B8401EB43B6700CBA33F /* baseViewController.m in Sources */,
+				104ACDA01EAAFF3700B1AF05 /* PHMainPage.m in Sources */,
+				1087B8451EB43D0100CBA33F /* PHLoginPage.m in Sources */,
+				102B087A1EAB2F320085B0C8 /* baseNavigationViewController.m in Sources */,
 				104ACD6D1EAAFF0D00B1AF05 /* AppDelegate.m in Sources */,
 				104ACD6A1EAAFF0D00B1AF05 /* main.m in Sources */,
 			);
@@ -429,24 +538,30 @@
 		};
 		104ACD961EAAFF0D00B1AF05 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60FF1FD7E26E04407EF0AFCA /* Pods-PeriodHelper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 97365M2U5B;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PeriodHelper/PeriodHelper-PrefixHeader.pch";
 				INFOPLIST_FILE = PeriodHelper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = HippoColors.PeriodHelper;
+				PRODUCT_BUNDLE_IDENTIFIER = Gigigun.PeriodHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		104ACD971EAAFF0D00B1AF05 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0727E834EF719F20388217D0 /* Pods-PeriodHelper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 97365M2U5B;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PeriodHelper/PeriodHelper-PrefixHeader.pch";
 				INFOPLIST_FILE = PeriodHelper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = HippoColors.PeriodHelper;
+				PRODUCT_BUNDLE_IDENTIFIER = Gigigun.PeriodHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -520,6 +635,7 @@
 				104ACD971EAAFF0D00B1AF05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		104ACD981EAAFF0D00B1AF05 /* Build configuration list for PBXNativeTarget "PeriodHelperTests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +644,7 @@
 				104ACD9A1EAAFF0D00B1AF05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		104ACD9B1EAAFF0D00B1AF05 /* Build configuration list for PBXNativeTarget "PeriodHelperUITests" */ = {
 			isa = XCConfigurationList;
@@ -536,6 +653,7 @@
 				104ACD9D1EAAFF0D00B1AF05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

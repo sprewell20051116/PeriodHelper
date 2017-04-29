@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PHMainPage : UIViewController
+@interface PHMainPage : baseViewController
 
 @end

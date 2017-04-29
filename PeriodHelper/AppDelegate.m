@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 
+@import Firebase;
 @interface AppDelegate ()
 
 @end
@@ -17,6 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    // Use Firebase library to configure APIs
+    [FIRApp configure];
+    
+    [GIDSignIn sharedInstance].clientID = [FIRApp defaultApp].options.clientID;
+    [GIDSignIn sharedInstance].delegate = self;
     return YES;
 }
 
@@ -94,5 +100,43 @@
         abort();
     }
 }
+
+#pragma mark - Firebase Usbage
+
+// Firebase
+- (BOOL)application:(UIApplication *)app
+            openURL:(NSURL *)url
+            options:(NSDictionary<NSString *, id> *)options {
+    return [[GIDSignIn sharedInstance] handleURL:url
+                               sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
+                                      annotation:options[UIApplicationOpenURLOptionsAnnotationKey]];
+}
+
+- (void)signIn:(GIDSignIn *)signIn didSignInForUser:(GIDGoogleUser *)user withError:(NSError *)error {
+    if (error == nil) {
+        NSLog(@"%s, userName = %@", __PRETTY_FUNCTION__, user.userID);
+        GIDAuthentication *authentication = user.authentication;
+        FIRAuthCredential *credential =
+        [FIRGoogleAuthProvider credentialWithIDToken:authentication.idToken
+                                         accessToken:authentication.accessToken];
+        
+        [[FIRAuth auth] signInWithCredential:credential
+                                  completion:^(FIRUser *user, NSError *error) {
+                                      NSLog(@"%s", __PRETTY_FUNCTION__);
+                                      NSLog(@"%@", user.providerID);
+                                      NSLog(@"%@", user.displayName);
+                                  }];
+        
+    } else {
+        NSLog(@"%@", error.localizedDescription);
+    }
+}
+
+- (void)signIn:(GIDSignIn *)signIn
+didDisconnectWithUser:(GIDGoogleUser *)user
+     withError:(NSError *)error {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+}
+
 
 @end
