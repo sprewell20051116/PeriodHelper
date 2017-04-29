@@ -9,5 +9,7 @@
 #ifndef General_h
 #define General_h
 
+#define LOGIN_PAGE_ID @"PHLoginPage"
+#define MAIN_PAGE_ID @"PHMainPage"
 
 #endif /* General_h */

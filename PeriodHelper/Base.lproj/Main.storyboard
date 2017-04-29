@@ -20,7 +20,19 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MainPage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IaV-4F-6CA">
+                                <rect key="frame" x="155" y="323.5" width="64.5" height="20"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IaV-4F-6CA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VCK-gA-FBz"/>
+                            <constraint firstItem="IaV-4F-6CA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YPB-ql-J62"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XbU-Mu-mjs"/>
                 </viewController>
@@ -40,9 +52,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kns-9t-nlW">
-                                <rect key="frame" x="164" y="317" width="46" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kns-9t-nlW">
+                                <rect key="frame" x="168" y="317" width="38" height="32"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
@@ -51,6 +62,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Kns-9t-nlW" firstAttribute="centerX" secondItem="vRw-RD-Pvd" secondAttribute="centerX" id="FbK-hL-Z7X"/>
+                            <constraint firstItem="Kns-9t-nlW" firstAttribute="centerY" secondItem="vRw-RD-Pvd" secondAttribute="centerY" id="l4g-qh-d9a"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Sdb-Yg-vbR"/>
                 </viewController>
@@ -69,7 +84,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="C8y-CK-clQ" kind="relationship" relationship="rootViewController" id="vuB-GJ-cPZ"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="XMs-gR-zBc"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bTM-q4-GE4" userLabel="First Responder" sceneMemberID="firstResponder"/>

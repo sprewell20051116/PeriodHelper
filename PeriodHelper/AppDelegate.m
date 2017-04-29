@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "PHLoginPage.h"
+#import "PHMainPage.h"
 
 @import Firebase;
 @interface AppDelegate ()
@@ -23,6 +25,21 @@
     
     [GIDSignIn sharedInstance].clientID = [FIRApp defaultApp].options.clientID;
     [GIDSignIn sharedInstance].delegate = self;
+    
+    [[FIRAuth auth] addAuthStateDidChangeListener:^(FIRAuth * _Nonnull auth, FIRUser * _Nullable user) {
+        NSLog(@"user = %@", user);
+        if (user == nil) {
+            NSLog(@"Not log in yet");
+            
+            UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
+                                                                     bundle: nil];
+            
+            PHLoginPage *loginPage = [mainStoryboard instantiateViewControllerWithIdentifier: LOGIN_PAGE_ID];
+            self.window.rootViewController = loginPage;
+        }
+    }];
+    
+    
     return YES;
 }
 
@@ -107,12 +124,15 @@
 - (BOOL)application:(UIApplication *)app
             openURL:(NSURL *)url
             options:(NSDictionary<NSString *, id> *)options {
+    
     return [[GIDSignIn sharedInstance] handleURL:url
                                sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
                                       annotation:options[UIApplicationOpenURLOptionsAnnotationKey]];
+    
 }
 
 - (void)signIn:(GIDSignIn *)signIn didSignInForUser:(GIDGoogleUser *)user withError:(NSError *)error {
+    
     if (error == nil) {
         NSLog(@"%s, userName = %@", __PRETTY_FUNCTION__, user.userID);
         GIDAuthentication *authentication = user.authentication;
