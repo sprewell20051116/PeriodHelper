@@ -30,10 +30,8 @@
         NSLog(@"user = %@", user);
         if (user == nil) {
             NSLog(@"Not log in yet");
-            
             UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
                                                                      bundle: nil];
-            
             PHLoginPage *loginPage = [mainStoryboard instantiateViewControllerWithIdentifier: LOGIN_PAGE_ID];
             self.window.rootViewController = loginPage;
         }
@@ -146,6 +144,9 @@
                                       NSLog(@"%@", user.providerID);
                                       NSLog(@"%@", user.displayName);
                                   }];
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"googleSignInNotification" object:nil];
+
         
     } else {
         NSLog(@"%@", error.localizedDescription);

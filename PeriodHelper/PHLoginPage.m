@@ -7,10 +7,10 @@
 //
 
 #import "PHLoginPage.h"
-@import Firebase;
-@import GoogleSignIn;
+#import "FirebaseModel.h"
 
-@interface PHLoginPage () <GIDSignInUIDelegate>
+
+@interface PHLoginPage () <FirebaseGoogleSignInDelegate>
 
 @end
 
@@ -18,11 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    // TODO(developer) Configure the sign-in button look/feel
-    
-    [GIDSignIn sharedInstance].uiDelegate = self;
-    [[GIDSignIn sharedInstance] signInSilently];
+    [FirebaseModel getInstance].googleSigninDelegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,32 +43,25 @@
     NSLog(@"%s", __PRETTY_FUNCTION__);
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-//
-//- (void)signIn:(GIDSignIn *)signIn didSignInForUser:(GIDGoogleUser *)user withError:(NSError *)error {
-//    // Perform any operations on signed in user here.
-//    NSString *userId = user.userID;                  // For client-side use only!
-//    NSString *idToken = user.authentication.idToken; // Safe to send to the server
-//    NSString *fullName = user.profile.name;
-//    NSString *givenName = user.profile.givenName;
-//    NSString *familyName = user.profile.familyName;
-//    NSString *email = user.profile.email;
-//    // ...
-//    
-//    NSLog(@"userID = %@", userId);
-//    NSLog(@"idToken = %@", idToken);
-//    NSLog(@"fullName = %@", fullName);
-//    NSLog(@"givenName = %@", givenName);
-//    NSLog(@"familyName = %@", familyName);
-//    NSLog(@"email = %@", email);
-//}
+
+- (void) firebaseGoogleSignIn:(GIDSignIn *)signIn presentViewController:(UIViewController *)viewController
+{
+    [self presentViewController:viewController animated:YES completion:nil];
+
+}
+- (void) firebaseGooglesignIn:(GIDSignIn *)signIn dismissViewController:(UIViewController *)viewController
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
 
 - (IBAction)SignInBtnClicked:(id)sender {
-    [[GIDSignIn sharedInstance] signIn];
+    [[FirebaseModel getInstance] firebaseGoogleSignIn];
 }
 
 - (IBAction)SignOutBtnClicked:(id)sender {
     
-    [[GIDSignIn sharedInstance] signOut];
+    [[FirebaseModel getInstance] firebaseGoogleSignOut];
 }
 
 

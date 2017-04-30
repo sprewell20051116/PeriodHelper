@@ -34,11 +34,60 @@
                             <constraint firstItem="IaV-4F-6CA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YPB-ql-J62"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="XbU-Mu-mjs"/>
+                    <navigationItem key="navigationItem" id="XbU-Mu-mjs">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Bix-8S-7RP">
+                            <connections>
+                                <segue destination="Je9-cv-sG5" kind="showDetail" id="eW0-mt-J7A"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="137.18140929535232"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="PZE-mC-NB2">
+            <objects>
+                <viewController id="Je9-cv-sG5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="w0f-mx-0L6"/>
+                        <viewControllerLayoutGuide type="bottom" id="CDN-P6-T5M"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xmH-Pw-Hch">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mdl-Yj-0dd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="HD1-sj-AHA"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Title" id="AEq-vi-ZGv">
+                                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="done" id="NeB-UL-LQm"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T68-KR-02c">
+                                <rect key="frame" x="153.5" y="317" width="67" height="32"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title="Add Data"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Mdl-Yj-0dd" secondAttribute="trailing" id="OLX-8r-3be"/>
+                            <constraint firstItem="Mdl-Yj-0dd" firstAttribute="leading" secondItem="xmH-Pw-Hch" secondAttribute="leading" id="PFM-5t-7pi"/>
+                            <constraint firstItem="Mdl-Yj-0dd" firstAttribute="top" secondItem="xmH-Pw-Hch" secondAttribute="top" id="WVM-Cr-UOr"/>
+                            <constraint firstItem="T68-KR-02c" firstAttribute="centerX" secondItem="xmH-Pw-Hch" secondAttribute="centerX" id="kMF-gj-5VC"/>
+                            <constraint firstItem="T68-KR-02c" firstAttribute="centerY" secondItem="xmH-Pw-Hch" secondAttribute="centerY" id="tML-gs-pz2"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E07-Xy-dsu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1772" y="138"/>
         </scene>
         <!--Login Page-->
         <scene sceneID="jcx-lx-WkI">
