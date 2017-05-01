@@ -1,5 +1,5 @@
 //
-//  PHAddDataPage.h
+//  PHAccountPage.h
 //  PeriodHelper
 //
 //  Created by GIGIGUN on 01/05/2017.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PHAddDataPage : UIViewController
+@interface PHAccountPage : baseViewController
 
 @end

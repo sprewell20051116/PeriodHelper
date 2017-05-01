@@ -10,7 +10,7 @@
 @import Firebase;
 @import GoogleSignIn;
 
-@protocol FirebaseGoogleSignInDelegate
+@protocol FirebaseGoogleSignInUIDelegate
 @optional
 - (void) firebaseGoogleSignIn:(GIDSignIn *)signIn presentViewController:(UIViewController *)viewController;
 - (void) firebaseGooglesignIn:(GIDSignIn *)signIn dismissViewController:(UIViewController *)viewController;
@@ -18,13 +18,12 @@
 @end
 
 @interface FirebaseModel : NSObject <GIDSignInUIDelegate> {
-    id <FirebaseGoogleSignInDelegate> __weak googleSigninDelegate;
+    id <FirebaseGoogleSignInUIDelegate> __weak googleSigninUIDelegate;
 }
 
-@property (weak, nonatomic) id <FirebaseGoogleSignInDelegate> googleSigninDelegate;
+@property (weak, nonatomic) id <FirebaseGoogleSignInUIDelegate> googleSigninUIDelegate;
 
 + (instancetype) getInstance;
-
 - (void) firebaseGoogleSignIn;
 - (void) firebaseGoogleSignOut;
 

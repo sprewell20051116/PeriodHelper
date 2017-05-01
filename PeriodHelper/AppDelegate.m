@@ -26,8 +26,13 @@
     [GIDSignIn sharedInstance].clientID = [FIRApp defaultApp].options.clientID;
     [GIDSignIn sharedInstance].delegate = self;
     
+    
+    
     [[FIRAuth auth] addAuthStateDidChangeListener:^(FIRAuth * _Nonnull auth, FIRUser * _Nullable user) {
+        
         NSLog(@"user = %@", user);
+        NSLog(@"user isAnonymous = %d", user.isAnonymous);
+        NSLog(@"user isAnonymous = %@", user.displayName);
         if (user == nil) {
             NSLog(@"Not log in yet");
             UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
@@ -132,6 +137,7 @@
 - (void)signIn:(GIDSignIn *)signIn didSignInForUser:(GIDGoogleUser *)user withError:(NSError *)error {
     
     if (error == nil) {
+        
         NSLog(@"%s, userName = %@", __PRETTY_FUNCTION__, user.userID);
         GIDAuthentication *authentication = user.authentication;
         FIRAuthCredential *credential =
@@ -140,12 +146,14 @@
         
         [[FIRAuth auth] signInWithCredential:credential
                                   completion:^(FIRUser *user, NSError *error) {
+                                      
                                       NSLog(@"%s", __PRETTY_FUNCTION__);
                                       NSLog(@"%@", user.providerID);
                                       NSLog(@"%@", user.displayName);
+                                      [[NSNotificationCenter defaultCenter] postNotificationName:GOOGLE_SIGNIN_STATUS_NOTIFY_KEY object:user];
+
                                   }];
         
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"googleSignInNotification" object:nil];
 
         
     } else {

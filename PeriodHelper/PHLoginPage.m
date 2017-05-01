@@ -8,9 +8,9 @@
 
 #import "PHLoginPage.h"
 #import "FirebaseModel.h"
+#import "baseNavigationViewController.h"
 
-
-@interface PHLoginPage () <FirebaseGoogleSignInDelegate>
+@interface PHLoginPage () <FirebaseGoogleSignInUIDelegate>
 
 @end
 
@@ -18,7 +18,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [FirebaseModel getInstance].googleSigninDelegate = self;
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(didSignIn:)
+                                                 name:GOOGLE_SIGNIN_STATUS_NOTIFY_KEY
+                                               object:nil];
+
+    [FirebaseModel getInstance].googleSigninUIDelegate = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -64,6 +69,15 @@
     [[FirebaseModel getInstance] firebaseGoogleSignOut];
 }
 
+- (void) didSignIn:(id) sender
+{
+    NSLog(@"%s - sender = %@", __PRETTY_FUNCTION__, sender);
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
+                                                             bundle: nil];
+    baseNavigationViewController *mainNav = [mainStoryboard instantiateViewControllerWithIdentifier:MAIN_NAV_ID];
+    [self presentViewController:mainNav animated:NO completion:nil];
+    
+}
 
 /*
 #pragma mark - Navigation

@@ -17,8 +17,9 @@
 		104ACD861EAAFF0D00B1AF05 /* PeriodHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 104ACD851EAAFF0D00B1AF05 /* PeriodHelperTests.m */; };
 		104ACD911EAAFF0D00B1AF05 /* PeriodHelperUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 104ACD901EAAFF0D00B1AF05 /* PeriodHelperUITests.m */; };
 		104ACDA01EAAFF3700B1AF05 /* PHMainPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 104ACD9F1EAAFF3700B1AF05 /* PHMainPage.m */; };
-		104F67C71EB6371F003336DE /* PHAddDataPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F67C61EB6371F003336DE /* PHAddDataPage.m */; };
 		104F67CA1EB63736003336DE /* FirebaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F67C91EB63736003336DE /* FirebaseModel.m */; };
+		104F67D01EB6D425003336DE /* PHAccountPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F67CF1EB6D425003336DE /* PHAccountPage.m */; };
+		104F67D31EB6EAAC003336DE /* PHAddDataPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 104F67D21EB6EAAC003336DE /* PHAddDataPage.m */; };
 		1087B83D1EB4381400CBA33F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1087B83C1EB4381400CBA33F /* GoogleService-Info.plist */; };
 		1087B8401EB43B6700CBA33F /* baseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1087B83F1EB43B6700CBA33F /* baseViewController.m */; };
 		1087B8451EB43D0100CBA33F /* PHLoginPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1087B8441EB43D0100CBA33F /* PHLoginPage.m */; };
@@ -64,10 +65,12 @@
 		104ACD921EAAFF0D00B1AF05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		104ACD9E1EAAFF3700B1AF05 /* PHMainPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHMainPage.h; sourceTree = "<group>"; };
 		104ACD9F1EAAFF3700B1AF05 /* PHMainPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHMainPage.m; sourceTree = "<group>"; };
-		104F67C51EB6371F003336DE /* PHAddDataPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHAddDataPage.h; sourceTree = "<group>"; };
-		104F67C61EB6371F003336DE /* PHAddDataPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHAddDataPage.m; sourceTree = "<group>"; };
 		104F67C81EB63736003336DE /* FirebaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirebaseModel.h; sourceTree = "<group>"; };
 		104F67C91EB63736003336DE /* FirebaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirebaseModel.m; sourceTree = "<group>"; };
+		104F67CE1EB6D425003336DE /* PHAccountPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHAccountPage.h; sourceTree = "<group>"; };
+		104F67CF1EB6D425003336DE /* PHAccountPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHAccountPage.m; sourceTree = "<group>"; };
+		104F67D11EB6EAAC003336DE /* PHAddDataPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PHAddDataPage.h; sourceTree = "<group>"; };
+		104F67D21EB6EAAC003336DE /* PHAddDataPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PHAddDataPage.m; sourceTree = "<group>"; };
 		1087B83C1EB4381400CBA33F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1087B83E1EB43B6700CBA33F /* baseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = baseViewController.h; sourceTree = "<group>"; };
 		1087B83F1EB43B6700CBA33F /* baseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = baseViewController.m; sourceTree = "<group>"; };
@@ -136,8 +139,10 @@
 				104ACD9F1EAAFF3700B1AF05 /* PHMainPage.m */,
 				1087B8431EB43D0100CBA33F /* PHLoginPage.h */,
 				1087B8441EB43D0100CBA33F /* PHLoginPage.m */,
-				104F67C51EB6371F003336DE /* PHAddDataPage.h */,
-				104F67C61EB6371F003336DE /* PHAddDataPage.m */,
+				104F67CE1EB6D425003336DE /* PHAccountPage.h */,
+				104F67CF1EB6D425003336DE /* PHAccountPage.m */,
+				104F67D11EB6EAAC003336DE /* PHAddDataPage.h */,
+				104F67D21EB6EAAC003336DE /* PHAddDataPage.m */,
 				104ACD711EAAFF0D00B1AF05 /* Main.storyboard */,
 				1087B8411EB43B7200CBA33F /* baseViewControllers */,
 				104ACD6B1EAAFF0D00B1AF05 /* AppDelegate.h */,
@@ -397,12 +402,13 @@
 			files = (
 				104ACD761EAAFF0D00B1AF05 /* PeriodHelper.xcdatamodeld in Sources */,
 				1087B8401EB43B6700CBA33F /* baseViewController.m in Sources */,
-				104F67C71EB6371F003336DE /* PHAddDataPage.m in Sources */,
+				104F67D31EB6EAAC003336DE /* PHAddDataPage.m in Sources */,
 				104ACDA01EAAFF3700B1AF05 /* PHMainPage.m in Sources */,
 				1087B8451EB43D0100CBA33F /* PHLoginPage.m in Sources */,
 				104F67CA1EB63736003336DE /* FirebaseModel.m in Sources */,
 				102B087A1EAB2F320085B0C8 /* baseNavigationViewController.m in Sources */,
 				104ACD6D1EAAFF0D00B1AF05 /* AppDelegate.m in Sources */,
+				104F67D01EB6D425003336DE /* PHAccountPage.m in Sources */,
 				104ACD6A1EAAFF0D00B1AF05 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

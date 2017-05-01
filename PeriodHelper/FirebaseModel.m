@@ -9,7 +9,7 @@
 #import "FirebaseModel.h"
 
 @implementation FirebaseModel
-@synthesize googleSigninDelegate;
+@synthesize googleSigninUIDelegate;
 
 + (instancetype) getInstance {
     
@@ -30,7 +30,7 @@
 // Present a view that prompts the user to sign in with Google
 - (void)signIn:(GIDSignIn *)signIn presentViewController:(UIViewController *)viewController {
     NSLog(@"%s", __PRETTY_FUNCTION__);
-    [googleSigninDelegate firebaseGoogleSignIn:signIn presentViewController:viewController];
+    [googleSigninUIDelegate firebaseGoogleSignIn:signIn presentViewController:viewController];
 
 //    [self presentViewController:viewController animated:YES completion:nil];
 }
@@ -38,9 +38,8 @@
 // Dismiss the "Sign in with Google" view
 - (void)signIn:(GIDSignIn *)signIn dismissViewController:(UIViewController *)viewController {
     NSLog(@"%s", __PRETTY_FUNCTION__);
-    [googleSigninDelegate firebaseGooglesignIn:signIn dismissViewController:viewController];
+    [googleSigninUIDelegate firebaseGooglesignIn:signIn dismissViewController:viewController];
 }
-
 
 - (void) firebaseGoogleSignIn
 {
@@ -50,6 +49,9 @@
 - (void) firebaseGoogleSignOut
 {
     [[GIDSignIn sharedInstance] signOut];
+    NSError *error;
+    [[FIRAuth auth] signOut:&error];
+    NSLog(@"error = %@", error);
 }
 
 #pragma mark -

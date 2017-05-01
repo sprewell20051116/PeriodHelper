@@ -2,7 +2,7 @@
 //  PHAddDataPage.m
 //  PeriodHelper
 //
-//  Created by GIGIGUN on 30/04/2017.
+//  Created by GIGIGUN on 01/05/2017.
 //  Copyright © 2017 GIGIGUN. All rights reserved.
 //
 
@@ -22,6 +22,9 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)doneBtnClicked:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 /*
