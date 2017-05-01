@@ -54,6 +54,41 @@
     NSLog(@"error = %@", error);
 }
 
+- (void) firebaseInitUserData
+{
+    [[[_ref child:@"users"] child:[FIRAuth auth].currentUser.uid] setValue:@{@"username": [FIRAuth auth].currentUser.displayName} withCompletionBlock:^(NSError * _Nullable error, FIRDatabaseReference * _Nonnull ref) {
+        NSLog(@"%s complete", __PRETTY_FUNCTION__);
+    }];
+}
+
+
+- (void) firebaseUpdateDataWithDic : (NSDictionary *) dic
+{
+    NSString *key = [[_ref child:@"posts"] childByAutoId].key;
+    NSDictionary *post = dic;
+    NSDictionary *childUpdates = @{[NSString stringWithFormat:@"/user-posts/%@/%@/", [[FIRAuth auth] currentUser].uid, key]: post};
+    
+    
+    [_ref updateChildValues:childUpdates];
+    [_ref updateChildValues:childUpdates withCompletionBlock:^(NSError * _Nullable error, FIRDatabaseReference * _Nonnull ref) {
+        NSLog(@"%s complete", __PRETTY_FUNCTION__);
+    }];
+    
+    
+}
+
+- (void) firebaseReadDataOnce
+{
+    NSString *userID = [FIRAuth auth].currentUser.uid;
+    [[[_ref child:@"users"] child:userID] observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+        // Get user value
+        NSLog(@"data snapshot = %@", snapshot.value[@"username"]);
+    } withCancelBlock:^(NSError * _Nonnull error) {
+        NSLog(@"%@", error.localizedDescription);
+    }];
+}
+
+
 #pragma mark -
 #pragma mark Private Functions
 -(instancetype) initUniqueInstance {
@@ -61,6 +96,8 @@
         
         [GIDSignIn sharedInstance].uiDelegate = self;
         [[GIDSignIn sharedInstance] signInSilently];
+        self.ref = [[FIRDatabase database] reference];
+
 
     }
     return self;

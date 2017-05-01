@@ -27,4 +27,10 @@
 - (void) firebaseGoogleSignIn;
 - (void) firebaseGoogleSignOut;
 
+
+@property (strong, nonatomic) FIRDatabaseReference *ref;
+- (void) firebaseInitUserData;
+- (void) firebaseUpdateDataWithDic : (NSDictionary *) dic;
+- (void) firebaseReadDataOnce;
+
 @end

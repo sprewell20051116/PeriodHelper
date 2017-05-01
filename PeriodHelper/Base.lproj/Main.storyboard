@@ -132,6 +132,9 @@
                                 <rect key="frame" x="153.5" y="317" width="67" height="32"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <state key="normal" title="Add Data"/>
+                                <connections>
+                                    <action selector="addDataBtnClicked:" destination="Je9-cv-sG5" eventType="touchUpInside" id="454-mS-fYc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -161,9 +164,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kns-9t-nlW">
-                                <rect key="frame" x="168" y="317" width="38" height="32"/>
+                                <rect key="frame" x="140" y="317" width="95" height="32"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                                <state key="normal" title="Login"/>
+                                <state key="normal" title="Google Signin"/>
                                 <connections>
                                     <action selector="SignInBtnClicked:" destination="C8y-CK-clQ" eventType="touchUpInside" id="50z-CE-CeM"/>
                                 </connections>

@@ -16,9 +16,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [GIDSignIn sharedInstance].uiDelegate = self;
-    [[GIDSignIn sharedInstance] signInSilently];
-    
+//    [[FIRAuth auth] addAuthStateDidChangeListener:^(FIRAuth * _Nonnull auth, FIRUser * _Nullable user) {
+//
+//        NSLog(@"user isAnonymous = %d", user.isAnonymous);
+//        NSLog(@"user isAnonymous = %@", user.displayName);
+//
+//        if (user == nil) {
+//            [self presentLoginPage];
+//        }
+//    }];
     // Do any additional setup after loading the view.
 }
 

@@ -8,6 +8,7 @@
 
 #import "PHLoginPage.h"
 #import "FirebaseModel.h"
+#import "PHuserDataModel.h"
 #import "baseNavigationViewController.h"
 
 @interface PHLoginPage () <FirebaseGoogleSignInUIDelegate>
@@ -18,10 +19,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(didSignIn:)
-                                                 name:GOOGLE_SIGNIN_STATUS_NOTIFY_KEY
-                                               object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self
+//                                             selector:@selector(didSignIn:)
+//                                                 name:GOOGLE_SIGNIN_STATUS_NOTIFY_KEY
+//                                               object:nil];
 
     [FirebaseModel getInstance].googleSigninUIDelegate = self;
 }
@@ -72,10 +73,16 @@
 - (void) didSignIn:(id) sender
 {
     NSLog(@"%s - sender = %@", __PRETTY_FUNCTION__, sender);
+    
+    
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
                                                              bundle: nil];
     baseNavigationViewController *mainNav = [mainStoryboard instantiateViewControllerWithIdentifier:MAIN_NAV_ID];
-    [self presentViewController:mainNav animated:NO completion:nil];
+    [self presentViewController:mainNav animated:NO completion:^{
+        
+        // init database
+        [[PHuserDataModel getInstance] firebaseDataInitUserData];
+    }];
     
 }
 

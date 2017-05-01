@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "PHLoginPage.h"
-#import "PHMainPage.h"
+#import "baseNavigationViewController.h"
 
 @import Firebase;
 @interface AppDelegate ()
@@ -26,19 +26,31 @@
     [GIDSignIn sharedInstance].clientID = [FIRApp defaultApp].options.clientID;
     [GIDSignIn sharedInstance].delegate = self;
     
+    if (nil == [[FIRAuth auth] currentUser].uid) {
+        NSLog(@"Not log in yet");
+        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
+                                                                 bundle: nil];
+        PHLoginPage *loginPage = [mainStoryboard instantiateViewControllerWithIdentifier: LOGIN_PAGE_ID];
+        self.window.rootViewController = loginPage;
+    }
     
     
     [[FIRAuth auth] addAuthStateDidChangeListener:^(FIRAuth * _Nonnull auth, FIRUser * _Nullable user) {
-        
+
         NSLog(@"user = %@", user);
-        NSLog(@"user isAnonymous = %d", user.isAnonymous);
-        NSLog(@"user isAnonymous = %@", user.displayName);
+        
         if (user == nil) {
-            NSLog(@"Not log in yet");
+            NSLog(@"%s, Not log in yet", __PRETTY_FUNCTION__);
             UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
                                                                      bundle: nil];
             PHLoginPage *loginPage = [mainStoryboard instantiateViewControllerWithIdentifier: LOGIN_PAGE_ID];
             self.window.rootViewController = loginPage;
+            
+        } else {
+            UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
+                                                                     bundle: nil];
+            baseNavigationViewController *mainPage = [mainStoryboard instantiateViewControllerWithIdentifier: MAIN_NAV_ID];
+            self.window.rootViewController = mainPage;
         }
     }];
     
@@ -150,11 +162,12 @@
                                       NSLog(@"%s", __PRETTY_FUNCTION__);
                                       NSLog(@"%@", user.providerID);
                                       NSLog(@"%@", user.displayName);
-                                      [[NSNotificationCenter defaultCenter] postNotificationName:GOOGLE_SIGNIN_STATUS_NOTIFY_KEY object:user];
-
+                                      
+//                                      if (user) {
+//                                          [[NSNotificationCenter defaultCenter] postNotificationName:GOOGLE_SIGNIN_STATUS_NOTIFY_KEY object:user];
+//                                      }
                                   }];
-        
-
+    
         
     } else {
         NSLog(@"%@", error.localizedDescription);
