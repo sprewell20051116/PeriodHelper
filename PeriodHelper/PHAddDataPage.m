@@ -26,7 +26,7 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)addDataBtnClicked:(id)sender {
-    [[PHuserDataModel getInstance] firebaseDataUpdateData];
+    [[PHuserDataModel getInstance] PHUserUpdateData];
 }
 
 /*

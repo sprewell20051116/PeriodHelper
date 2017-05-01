@@ -7,7 +7,7 @@
 //
 
 #import "PHMainPage.h"
-
+#import "PHuserDataModel.h"
 @interface PHMainPage ()
 
 @end
@@ -23,6 +23,11 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)readDataBtnClicked:(id)sender {
+    [[PHuserDataModel getInstance] PHUserReadUserPostDataWithBlock:^(FIRDataSnapshot *snapshot) {
+        NSLog(@"%s - snap = %@", __PRETTY_FUNCTION__, snapshot);
+    }];
 }
 
 /*

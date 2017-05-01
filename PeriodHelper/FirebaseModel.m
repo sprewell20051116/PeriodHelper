@@ -22,6 +22,7 @@
     return instance;
 }
 
+#pragma mark - Firebase Google Sign In functions
 - (void)signInWillDispatch:(GIDSignIn *)signIn error:(NSError *)error {
     //    [myActivityIndicator stopAnimating];
     NSLog(@"%s", __PRETTY_FUNCTION__);
@@ -54,6 +55,7 @@
     NSLog(@"error = %@", error);
 }
 
+#pragma mark - Firebase database functions
 - (void) firebaseInitUserData
 {
     [[[_ref child:@"users"] child:[FIRAuth auth].currentUser.uid] setValue:@{@"username": [FIRAuth auth].currentUser.displayName} withCompletionBlock:^(NSError * _Nullable error, FIRDatabaseReference * _Nonnull ref) {
@@ -80,13 +82,38 @@
 - (void) firebaseReadDataOnce
 {
     NSString *userID = [FIRAuth auth].currentUser.uid;
-    [[[_ref child:@"users"] child:userID] observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+//    [[[_ref child:@"users"] child:userID] observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+//        // Get user value
+//        NSLog(@"data snapshot = %@", snapshot);
+//    } withCancelBlock:^(NSError * _Nonnull error) {
+//        NSLog(@"%@", error.localizedDescription);
+//    }];
+//    
+    
+    [[[_ref child:@"user-posts"] child:userID] observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
         // Get user value
-        NSLog(@"data snapshot = %@", snapshot.value[@"username"]);
+        NSLog(@"data snapshot = %@", snapshot);
     } withCancelBlock:^(NSError * _Nonnull error) {
         NSLog(@"%@", error.localizedDescription);
     }];
+    
+    
 }
+
+
+- (void) firebaseReadUserPostDataWithBlock:(void (^)(FIRDataSnapshot *snapshot)) block
+{
+    NSString *userID = [FIRAuth auth].currentUser.uid;
+    
+    [[[_ref child:@"user-posts"] child:userID] observeSingleEventOfType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+        // Get user value
+        NSLog(@"data snapshot = %@", snapshot);
+    } withCancelBlock:^(NSError * _Nonnull error) {
+        NSLog(@"%@", error.localizedDescription);
+    }];
+    
+}
+
 
 
 #pragma mark -

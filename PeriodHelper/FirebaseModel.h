@@ -32,5 +32,7 @@
 - (void) firebaseInitUserData;
 - (void) firebaseUpdateDataWithDic : (NSDictionary *) dic;
 - (void) firebaseReadDataOnce;
+- (void) firebaseReadUserPostDataWithBlock:(void (^)(FIRDataSnapshot *snapshot)) block;
+
 
 @end

@@ -10,8 +10,9 @@
 
 @interface PHuserDataModel : NSObject
 + (instancetype) getInstance;
-- (void) firebaseDataInitUserData;
-- (void) firebaseDataUpdateData;
-- (void) firebaseDataReadeData;
+- (void) PHUserInitUserData;
+- (void) PHUserUpdateData;
+- (void) PHUserReadeData;
+- (void) PHUserReadUserPostDataWithBlock:(void (^)(FIRDataSnapshot *snapshot)) block;
 
 @end

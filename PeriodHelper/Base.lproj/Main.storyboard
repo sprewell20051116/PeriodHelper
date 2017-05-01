@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -27,11 +28,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FJm-7Z-ZUf">
+                                <rect key="frame" x="151" y="484.5" width="72" height="32"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title="Read Data"/>
+                                <connections>
+                                    <action selector="readDataBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V7d-8c-1gV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="IaV-4F-6CA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VCK-gA-FBz"/>
+                            <constraint firstItem="FJm-7Z-ZUf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wsd-ms-bHa"/>
                             <constraint firstItem="IaV-4F-6CA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="YPB-ql-J62"/>
+                            <constraint firstItem="FJm-7Z-ZUf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.5" id="uPD-V6-1ON"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XbU-Mu-mjs">
@@ -164,9 +175,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kns-9t-nlW">
-                                <rect key="frame" x="140" y="317" width="95" height="32"/>
+                                <rect key="frame" x="138" y="317" width="100" height="32"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                                <state key="normal" title="Google Signin"/>
+                                <state key="normal" title="Google Sign In"/>
                                 <connections>
                                     <action selector="SignInBtnClicked:" destination="C8y-CK-clQ" eventType="touchUpInside" id="50z-CE-CeM"/>
                                 </connections>

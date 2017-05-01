@@ -27,7 +27,7 @@
     [GIDSignIn sharedInstance].delegate = self;
     
     if (nil == [[FIRAuth auth] currentUser].uid) {
-        NSLog(@"Not log in yet");
+        NSLog(@"%s FIRUser not login", __PRETTY_FUNCTION__);
         UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
                                                                  bundle: nil];
         PHLoginPage *loginPage = [mainStoryboard instantiateViewControllerWithIdentifier: LOGIN_PAGE_ID];

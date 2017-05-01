@@ -81,7 +81,7 @@
     [self presentViewController:mainNav animated:NO completion:^{
         
         // init database
-        [[PHuserDataModel getInstance] firebaseDataInitUserData];
+        [[PHuserDataModel getInstance] PHUserInitUserData];
     }];
     
 }

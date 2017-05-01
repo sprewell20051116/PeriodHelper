@@ -27,7 +27,7 @@
     return instance;
 }
 
--(void) firebaseDataUpdateData
+-(void) PHUserUpdateData
 {
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -41,16 +41,20 @@
     
 }
 
--(void) firebaseDataReadeData
+-(void) PHUserReadeData
 {
     [_firebaseObj firebaseReadDataOnce];
 }
 
-- (void) firebaseDataInitUserData
+- (void) PHUserInitUserData
 {
     [_firebaseObj firebaseInitUserData];
 }
 
+- (void) PHUserReadUserPostDataWithBlock:(void (^)(FIRDataSnapshot *snapshot)) block
+{
+    [_firebaseObj firebaseReadUserPostDataWithBlock:block];
+}
 
 
 #pragma mark -
