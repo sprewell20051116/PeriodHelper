@@ -49,10 +49,11 @@
 
 - (void) firebaseGoogleSignOut
 {
-    [[GIDSignIn sharedInstance] signOut];
+//    [[GIDSignIn sharedInstance] signOut];
     NSError *error;
     [[FIRAuth auth] signOut:&error];
-    NSLog(@"error = %@", error);
+    NSLog(@"firebaseGoogleSignOut, error = %@", error);
+    
 }
 
 #pragma mark - Firebase database functions

@@ -23,6 +23,7 @@
 
 @property (weak, nonatomic) id <FirebaseGoogleSignInUIDelegate> googleSigninUIDelegate;
 
+
 + (instancetype) getInstance;
 - (void) firebaseGoogleSignIn;
 - (void) firebaseGoogleSignOut;

@@ -163,9 +163,6 @@
                                       NSLog(@"%@", user.providerID);
                                       NSLog(@"%@", user.displayName);
                                       
-//                                      if (user) {
-//                                          [[NSNotificationCenter defaultCenter] postNotificationName:GOOGLE_SIGNIN_STATUS_NOTIFY_KEY object:user];
-//                                      }
                                   }];
     
         
