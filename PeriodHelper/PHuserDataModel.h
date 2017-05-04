@@ -14,5 +14,6 @@
 - (void) PHUserUpdateData;
 - (void) PHUserReadeData;
 - (void) PHUserReadUserPostDataWithBlock:(void (^)(FIRDataSnapshot *snapshot)) block;
+- (NSURL*) PHUserGetUserPhotoURL;
 
 @end

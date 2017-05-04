@@ -56,6 +56,11 @@
     [_firebaseObj firebaseReadUserPostDataWithBlock:block];
 }
 
+- (NSURL*) PHUserGetUserPhotoURL
+{
+    return [_firebaseObj firebaseGerUserPhotoURL];
+}
+
 
 #pragma mark -
 #pragma mark Private Functions

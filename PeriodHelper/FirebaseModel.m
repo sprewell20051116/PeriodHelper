@@ -115,18 +115,26 @@
     
 }
 
+- (NSURL*) firebaseGerUserPhotoURL
+{
+    FIRUser *user = [FIRAuth auth].currentUser;
+    if (user) {
+        NSLog(@"photo url %@", user.photoURL);
+        return user.photoURL;
+    }
+    return nil;
+}
+
 
 
 #pragma mark -
 #pragma mark Private Functions
 -(instancetype) initUniqueInstance {
     if (self = [super init]) {
-        
+        NSLog(@"%s", __PRETTY_FUNCTION__);
         [GIDSignIn sharedInstance].uiDelegate = self;
         [[GIDSignIn sharedInstance] signInSilently];
         self.ref = [[FIRDatabase database] reference];
-
-
     }
     return self;
 }

@@ -34,6 +34,7 @@
 - (void) firebaseUpdateDataWithDic : (NSDictionary *) dic;
 - (void) firebaseReadDataOnce;
 - (void) firebaseReadUserPostDataWithBlock:(void (^)(FIRDataSnapshot *snapshot)) block;
+- (NSURL*) firebaseGerUserPhotoURL;
 
 
 @end

@@ -7,8 +7,11 @@
 //
 
 #import "PHAccountPage.h"
+#import "PHuserDataModel.h"
+#import <UIImageView+AFNetworking.h>
 
 @interface PHAccountPage () <GIDSignInUIDelegate>
+@property (strong, nonatomic) IBOutlet UIImageView *userImageView;
 
 @end
 
@@ -16,16 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [[FIRAuth auth] addAuthStateDidChangeListener:^(FIRAuth * _Nonnull auth, FIRUser * _Nullable user) {
-//
-//        NSLog(@"user isAnonymous = %d", user.isAnonymous);
-//        NSLog(@"user isAnonymous = %@", user.displayName);
-//
-//        if (user == nil) {
-//            [self presentLoginPage];
-//        }
-//    }];
-    // Do any additional setup after loading the view.
+    
+    [_userImageView setImageWithURL:[[PHuserDataModel getInstance] PHUserGetUserPhotoURL] placeholderImage:nil];
 }
 
 - (void)didReceiveMemoryWarning {

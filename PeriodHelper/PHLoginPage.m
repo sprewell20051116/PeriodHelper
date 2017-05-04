@@ -12,7 +12,6 @@
 #import "baseNavigationViewController.h"
 
 @interface PHLoginPage () <FirebaseGoogleSignInUIDelegate>
-
 @end
 
 @implementation PHLoginPage

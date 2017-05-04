@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "PHLoginPage.h"
+#import "FirebaseModel.h"
 #import "baseNavigationViewController.h"
 
 @import Firebase;
@@ -23,21 +24,14 @@
     // Use Firebase library to configure APIs
     [FIRApp configure];
     
+    
     [GIDSignIn sharedInstance].clientID = [FIRApp defaultApp].options.clientID;
     [GIDSignIn sharedInstance].delegate = self;
     
-    if (nil == [[FIRAuth auth] currentUser].uid) {
-        NSLog(@"%s FIRUser not login", __PRETTY_FUNCTION__);
-        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main"
-                                                                 bundle: nil];
-        PHLoginPage *loginPage = [mainStoryboard instantiateViewControllerWithIdentifier: LOGIN_PAGE_ID];
-        self.window.rootViewController = loginPage;
-    }
-    
-    
+    [FirebaseModel getInstance];
     [[FIRAuth auth] addAuthStateDidChangeListener:^(FIRAuth * _Nonnull auth, FIRUser * _Nullable user) {
 
-        NSLog(@"user = %@", user);
+        NSLog(@"addAuthStateDidChangeListener - user = %@", user);
         
         if (user == nil) {
             NSLog(@"%s, Not log in yet", __PRETTY_FUNCTION__);
